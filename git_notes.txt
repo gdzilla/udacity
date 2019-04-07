@@ -48,10 +48,9 @@ git log -p fdf5493 # details for the specific commit
 git show # show display of a specific commit fdf5493
 git log -w # ignores white space changes
 -----------------
-git remote # is used to add a connection to a new remote repository
+git remote add origin https:# is used to add a connection to remote repository. Origin isn't special(short name)
 git remote -v # is used to see the details about a connection to a remote, repo (URL)
-git remote origin https:// # orgin isn't special. Can name the repo anything. Origin is just a short name
-git push <remote-shortname> <branch> # short name default it's origin. push commits to repo
+git push <remote-shortname> <branch> # short name default it's origin. push commits to repo (Git Hub)
 """
 log into GitHub if HTTP configured
 log in NOT required if SSH configured # https://help.github.com/en/articles/connecting-to-github-with-ssh
