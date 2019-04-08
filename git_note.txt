@@ -1,0 +1,69 @@
+"""
+Python Git notes
+Confirm you are within the Working Directory
+"""
+
+cd # change directory 
+cd .. # change to previous directory
+pwd # displays working directory path EX: cd:/user/documents/python.exe
+ls -1 # items within working directory with details
+ls # items in working directory
+mkdir <># add new file to directory 
+echo <> # add new file
+touch <> # add new file 
+----------------
+git init # create a new repository. an empty directory that you converted to a Git repository using
+git clone # Copy repot to your working directory
+git status # get the status of items within working directory. prior to staging
+git add <file> # adds to the staging table
+git add css/app.css js/app.js # add to staging table
+git add . # the period adds all files and nested files to the staging table
+git rm --cached <file> # will unstage file
+-----------------
+git config --global core.editor <directory/python.exe> # opens code editorand than type in (header), "commit message"
+git commit -m "commit message" # for the initial commit use this command, by-pass code editor
+git tag -a v1.0 # adds a tag use '-a' flag
+git tag -d v1.0 # removes a tag us '-d' flag
+git tag -delete v1.0 # removes a tag us '-d' flag
+git tag -a beta b552fa5 # to tag a specific commit
+git diff # command can be used to see changes that have been made but haven't been committed, yet.
+-----------------
+.gitignore # add files within this folder you want to ignore for the commit. 
+"""
+Globbing
+blank lines can be used for spacing
+# - marks line as a comment
+* - matches 0 or more characters
+? - matches 1 character
+[abc] - matches a, b, _or_ c
+** - matches nested directories - a/**/z matches
+"""
+----------------
+git log # SHA, date, Athor, description
+git log --oneline # flag, abreviated SHA, description 
+q # quit git log
+git log --stat # displays what files were affected. displays the file(s) that have been modified
+git log -p # shows the actual changes
+git log -p fdf5493 # details for the specific commit
+git show # show display of a specific commit fdf5493
+git log -w # ignores white space changes
+git log --oneline --graph --decorate --all
+-----------------
+git remote add origin https:# is used to add a connection to remote repository. Origin isn't special(short name)
+git remote -v # is used to see the details about a connection to a remote, repo (URL)
+git push <remote-shortname> <branch> # short name default it's origin. push commits to repo (Git Hub)
+"""
+log into GitHub if HTTP configured
+log in NOT required if SSH configured # https://help.github.com/en/articles/connecting-to-github-with-ssh
+"""
+git pull # 
+
+-----------------
+# Step Summary
+create a new repository on the command line
+echo "# bikeshare_2.py" >> README.md # Can be any file, that needs to be tracked
+git init # Creates local repo
+git add README.md # add file to staging area
+git commit -m "Write comment here" # add change to local repo 
+git remote add origin https://github.com/gdzilla/bikeshare_2.py.git # Create remote connection, HTTP or SSH 
+git push -u origin master # Push changes to remote repo
