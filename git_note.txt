@@ -48,16 +48,23 @@ git log -p fdf5493 # details for the specific commit
 git show # show display of a specific commit fdf5493
 git log -w # ignores white space changes
 git log --oneline --graph --decorate --all
+git shortlog # groups by author commits
+git shortlog -s -n # summarizes 
+git log --author= Sean # search by author
+git show 5966b66 # search for specific commit first 7 letters of SHA
+git log --grep=bug # search commit comments by key word. Bug,fix, or anything. SPACING is important***
+
 -----------------
 git remote add origin https:# is used to add a connection to remote repository. Origin isn't special(short name)
 git remote -v # is used to see the details about a connection to a remote, repo (URL)
 git push <remote-shortname> <branch> # short name default it's origin. push commits to repo (Git Hub)
+git push # will sync the remote repository with the local repository (lead)
 """
 log into GitHub if HTTP configured
 log in NOT required if SSH configured # https://help.github.com/en/articles/connecting-to-github-with-ssh
 """
-git pull # 
-
+git pull # will sync the local repository with the remote repository (lead)
+git fetch # the commit(s) on the remote branch are copied to the local repository. Use case : changes that neither (local/remote) of the other ones has. 
 -----------------
 # Step Summary
 create a new repository on the command line
@@ -67,3 +74,6 @@ git add README.md # add file to staging area
 git commit -m "Write comment here" # add change to local repo 
 git remote add origin https://github.com/gdzilla/bikeshare_2.py.git # Create remote connection, HTTP or SSH 
 git push -u origin master # Push changes to remote repo
+-----------------
+
+
