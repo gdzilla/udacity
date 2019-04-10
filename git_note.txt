@@ -57,7 +57,13 @@ git log --grep=bug # search commit comments by key word. Bug,fix, or anything. S
 -----------------
 git remote add origin https:# is used to add a connection to remote repository. Origin isn't special(short name)
 git remote -v # is used to see the details about a connection to a remote, repo (URL)
+git remote add upstream https: # "upstream" is typically used to refer to the source repository. upstream = SOURCE-REPO, origin = MINE
 git push <remote-shortname> <branch> # short name default it's origin. push commits to repo (Git Hub)
+git remote rename origin mine # use rename to rename remote 
+git checkout -b <name-branch> #  Create a new branch
+git checkout master # to make sure I'm on the correct branch for merging
+git push origin new-branch # push new-branch to remote repo 
+git merge upstream/master # Merge changes upstreams
 git push # will sync the remote repository with the local repository (lead)
 """
 log into GitHub if HTTP configured
@@ -65,9 +71,11 @@ log in NOT required if SSH configured # https://help.github.com/en/articles/conn
 """
 git pull # will sync the local repository with the remote repository (lead)
 git fetch # the commit(s) on the remote branch are copied to the local repository. Use case : changes that neither (local/remote) of the other ones has. 
+git fetch upstream master # to pull changes
+git merge origin/master # # # 
 -----------------
 # Step Summary
-create a new repository on the command line
+## create a new repository on the command line
 echo "# bikeshare_2.py" >> README.md # Can be any file, that needs to be tracked
 git init # Creates local repo
 git add README.md # add file to staging area
