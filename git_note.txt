@@ -47,7 +47,7 @@ git log -p # shows the actual changes
 git log -p fdf5493 # details for the specific commit
 git show # show display of a specific commit fdf5493
 git log -w # ignores white space changes
-git log --oneline --graph --decorate --all
+git log --oneline --graph --decorate --all # review ALL branch changes
 git shortlog # groups by author commits
 git shortlog -s -n # summarizes 
 git log --author= Sean # search by author
@@ -63,7 +63,6 @@ git remote rename origin mine # use rename to rename remote
 git checkout -b <name-branch> #  Create a new branch
 git checkout master # to make sure I'm on the correct branch for merging
 git push origin new-branch # push new-branch to remote repo 
-git merge upstream/master # Merge changes upstreams
 git push # will sync the remote repository with the local repository (lead)
 """
 log into GitHub if HTTP configured
@@ -73,6 +72,7 @@ git pull # will sync the local repository with the remote repository (lead)
 git fetch # the commit(s) on the remote branch are copied to the local repository. Use case : changes that neither (local/remote) of the other ones has. 
 git fetch upstream master # to pull changes
 git merge origin/master # # # 
+git merge upstream/master # Merge changes upstreams
 -----------------
 # Step Summary
 ## create a new repository on the command line
